@@ -1,5 +1,11 @@
 package gin_gorm
 
+import (
+	"github.com/gin-gonic/gin"
+	"github.com/jinzhu/gorm"
+)
+
+// GormTx 在 gin.Context 中的 key
 const GormTx = "gorm_tx"
 
 // GormMiddleware 为 gin 提供 gorm 的中间件.
