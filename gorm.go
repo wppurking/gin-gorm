@@ -42,3 +42,12 @@ func GormMiddleware(tx *gorm.DB) gin.HandlerFunc {
 		c.Next()
 	}
 }
+
+// Tx 从 gin.Context 中获取可以使用的事务
+func Tx(c *gin.Context) *gorm.DB {
+	val := c.MustGet(GormTx)
+	if tx, ok := val.(*gorm.DB); ok {
+		return tx
+	}
+	return nil
+}
