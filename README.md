@@ -7,7 +7,7 @@ An gin middleware to provide every gin action an gorm transaction
 
 # Usage
 1. First `gin.Use` this middleware
-2. In the `gin Action` method use `gin_gorm.Tx(c)` to get the gorm.DB transactino to user.
+2. In the `gin Action` method use `gin_gorm.Tx(c)` to get the gorm.DB transactino to use
 ```
 func main() {
 	router := gin.Default()
